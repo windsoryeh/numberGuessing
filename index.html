@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number game</title>
+</head>
+<body>
+    input your minimum and maximum:<br>
+    <input type="number" title="minimum" id="minimum" value="1">
+    <input type="number" title="maximum" id="maximum" value="100">
+    <br>
+    <button title="generate a number" onclick="generate()">generate a number</button>
+    <br><br>
+    input your guess:<br>
+    <input type="number" id="input">
+    <button title="guess" onclick="solve()">guess</button>
+    <br>
+    <b>Your guesses:</b>
+    <p id = "list"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + String();
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
