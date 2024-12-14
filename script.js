@@ -24,6 +24,7 @@ function generate() {
     }
     Window.relationsMax = ending
     Window.relationsMin = beginning
+    Window.tries = 0
     relations();
 }
 
@@ -31,23 +32,24 @@ window.onload = generate()
 
 function solve(){
     let input = Number(document.getElementById("input").value);
+    Window.tries += 1
     let currlist = document.getElementById("list")
     let list = [" is too large." , " is too small." , " is the correct answer."]
 
     if (input > answer){
-        currlist.innerHTML = input + list[0] + `<br>` + currlist.innerHTML;
+        currlist.innerHTML = `Trial #${Window.tries}: ${input + list[0]}` + `<br>` + currlist.innerHTML;
         if (input < Window.relationsMax){
             Window.relationsMax = input
         }
     }
     else if (input < answer){
-        currlist.innerHTML = input + list[1] + `<br>` + currlist.innerHTML;
+        currlist.innerHTML = `Trial #${Window.tries}: ${input + list[1]}` + `<br>` + currlist.innerHTML;
         if (input > Window.relationsMin){
             Window.relationsMin = input
         }
      }
     else{
-        currlist.innerHTML = `<p class="blue">${input + list[2]}</p>` + `<br>` + currlist.innerHTML;
+        currlist.innerHTML = `<p class="blue">Trial #${Window.tries}: ${input + list[2]}</p>` + `<br>` + currlist.innerHTML;
         generate()
     }
     relations();
