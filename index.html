@@ -6,14 +6,20 @@
     <title>Number game</title>
     <link rel="stylesheet" href="css.css"></head>
 <body>
-    Input your minimum and maximum:<br>
-    <input type="number" title="minimum" id="minimum" value="1" placeholder="minimum" onkeydown="enterGenerate()">
-    <input type="number" title="maximum" id="maximum" value="100" placeholder="maximum" onkeydown="enterGenerate()">
-    <input type="submit" title="generate a number" onclick="generate()" value="generate a number">
-    <br><br>
+    <div class="settings">
+        Input your minimum and maximum:<br>
+        <br>Minimum: <input type="number" title="minimum" id="minimum" value="1" placeholder="minimum" onkeydown="enterGenerate()">
+        <br>Maximum: <input type="number" title="maximum" id="maximum" value="100" placeholder="maximum" onkeydown="enterGenerate()">
+        <br><input type="submit" title="generate a number" onclick="generate()" value="generate a number">
+        <br><br>
+    </div>
+    <div class="input">
     Input your guess:<br>
-    <input type="number" id="input" placeholder="Input your number here." onkeydown="enterSolve()" autofocus="True">
-    <input type="submit" title="guess" onclick="solve()" value="guess">
+        <input type="number" id="input" placeholder="Input your number here." onkeydown="enterSolve()" autofocus="True">
+        <br>
+        <input type="submit" title="guess" onclick="solve()" value="guess">
+    </div>
+
     <br>
     <h1 id="relations"></h1>
     <br>
