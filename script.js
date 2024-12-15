@@ -39,13 +39,13 @@ function solve(){
     if (input > answer){
         currlist.innerHTML = `Trial #${Window.tries}: ${input + list[0]}` + `<br>` + currlist.innerHTML;
         if (input < Window.relationsMax){
-            Window.relationsMax = input
+            Window.relationsMax = input - 1
         }
     }
     else if (input < answer){
         currlist.innerHTML = `Trial #${Window.tries}: ${input + list[1]}` + `<br>` + currlist.innerHTML;
         if (input > Window.relationsMin){
-            Window.relationsMin = input
+            Window.relationsMin = input + 1
         }
      }
     else{
